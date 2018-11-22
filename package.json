@@ -1,0 +1,32 @@
+{
+  "name": "video-poker-rtp-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MoonCall/video-poker-calculator.git"
+  },
+  "keywords": [
+    "video",
+    "poker",
+    "rtp",
+    "house",
+    "edge",
+    "calculator",
+    "simulator"
+  ],
+  "author": "MoonCall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoonCall/video-poker-calculator/issues"
+  },
+  "homepage": "https://github.com/MoonCall/video-poker-calculator#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.10",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  }
+}
