@@ -1,4 +1,10 @@
-import { UltimateXPokerGame, OptimalHoldTargetSelector, Simulator, allPayTitleToJudgeFuncMap, IPayTitleMap } from './simulator';
+import {
+  IPayTitleMap,
+} from './src/video-poker/types';
+import { allPayTitleToJudgeFuncMap } from './src/video-poker/supported-pay';
+import { UltimateXPokerGame } from './src/video-poker/game';
+import { OptimalHoldTargetSelector } from './src/hold-target-selector/optimal-selector';
+import Simulator from './src/simulator/simulator';
 
 // WARNING: property should be ordered by priority (higher first)
 // e.g.) JAKCS_OR_BETTER should located after FULL_HOUSE.

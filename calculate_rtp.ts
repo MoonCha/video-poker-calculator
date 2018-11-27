@@ -1,4 +1,10 @@
-import { BasicPokerGame, OptimalHoldTargetSelector, RTPCalculator, allPayTitleToJudgeFuncMap, IPayTitleMap } from './simulator';
+import {
+  IPayTitleMap,
+} from './src/video-poker/types';
+import { allPayTitleToJudgeFuncMap } from './src/video-poker/supported-pay';
+import { BasicPokerGame } from './src/video-poker/game';
+import { OptimalHoldTargetSelector } from './src/hold-target-selector/optimal-selector';
+import RTPCalculator from './src/rtp-caculator/rtp-calculator';
 
 // WARNING: property should be ordered by priority (higher first)
 // e.g.) JAKCS_OR_BETTER should located after FULL_HOUSE.
