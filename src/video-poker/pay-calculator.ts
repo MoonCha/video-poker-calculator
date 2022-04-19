@@ -16,11 +16,10 @@ export default class PayCalculator implements IPayCalculator {
     this.pay_table = payTable;
     const judgeFuncMap: IPayTitleMap<IJudgeFunc> = {};
     this.judge_func_with_pay_title_array = [];
-    // use getOwnPropertyNames to guarantee string property to be ordered by its creation order
     // Note: property should be ordered by priority (higher first)
     // e.g.) JAKCS_OR_BETTER should located after FULL_HOUSE.
     // If not, FULL_HOUSE hand can be payed as if it is JACKS_OR_BETTER
-    const payTitleList = Object.getOwnPropertyNames(this.pay_table) as (keyof IPayTitleMap<number>)[];
+    const payTitleList = Object.entries(this.pay_table).sort((a,b) => b[1]-a[1]).map(([n]) => n) as (keyof IPayTitleMap<number>)[];
     for (let i = 0; i < payTitleList.length; ++i) {
       const payTitle = payTitleList[i];
       if (payTitleToJudgeFuncMap[payTitle] == null) {
