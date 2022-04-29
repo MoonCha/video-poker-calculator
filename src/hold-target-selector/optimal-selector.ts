@@ -43,8 +43,10 @@ export class OptimalHoldTargetSelector implements IOptimalHoldTargetSelector {
     console.log("Start optimal selector init");
     console.log("Trying load discard value table from file");
     const hashGenerator = crypto.createHash('md5');
-    // use getOwnPropertyNames to guarantee string property to be ordered by its creation order
-    hashGenerator.update(JSON.stringify(Object.getOwnPropertyNames(this.pay_calculator.pay_table)));
+     // use getOwnPropertyNames().sort() so different pay multiplier and order doesn't change the hash
+    hashGenerator.update(
+      JSON.stringify(Object.getOwnPropertyNames(this.pay_calculator.pay_table).sort())
+    );
     const payTableHash = hashGenerator.digest('hex');
     const fileCacheName = `filecache_${payTableHash}`;
     try {

@@ -6,9 +6,6 @@ import { CheatedPokerGame } from './src/video-poker/game';
 import { CheatedOptimalHoldTargetSelector } from './src/hold-target-selector/optimal-selector';
 import Simulator from './src/simulator/simulator';
 
-// WARNING: property should be ordered by priority (higher first)
-// e.g.) JAKCS_OR_BETTER should located after FULL_HOUSE.
-// If not, FULL_HOUSE hand can be payed as if it is JACKS_OR_BETTER
 const testPayTable: IPayTitleMap<number> = {
   ROYAL_STRAIGHT_FLUSH: 250,
   STRAIGHT_FLUSH: 50,

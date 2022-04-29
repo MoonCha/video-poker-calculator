@@ -179,4 +179,3 @@ You can arbitrarily modify those sample files or create new ones. However be car
 
 ## TODO
 - reconstruct file structures (merge, split, hierarchy)
-- remove undefined behavior dependent logic on pay table setting: `// WARNING: property should be ordered by priority (higher first)`
